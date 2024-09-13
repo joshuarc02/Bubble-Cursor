@@ -1,0 +1,112 @@
+:root {
+    --dot-size: 5vmin;
+}
+
+body { 
+    background-color: #FEFBD8;
+    font-family: "Playpen Sans", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 800;
+    margin: 0;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+button { 
+    font-family: inherit;
+    background-color: inherit;
+    filter: brightness(90%);
+    border-width: 1px;
+    border-radius: 1vmin;
+    height: fit-content;
+    width: fit-content;
+    font-size: 3vh;
+}
+
+input, input:hover, input:focus, input:active{
+    background-color: transparent;
+    filter: contrast(150%);
+    border-radius: .5vmin;
+    width: 2.5rem;
+}
+
+
+.dim-text{    
+    width: 3rem;
+    display: inline-block;
+}
+.dim-text-extended{    
+    width: 6rem;
+    display: inline-block;
+}
+
+#header {
+    background-color: #BB9AB1;
+    border-radius: .5vmin;
+    box-shadow: 0 0 1vh #5a4a55;
+    display: flex;
+    align-items: center;
+}
+
+#title { 
+    padding: 1vmin;
+    font-size: 5vh;
+    margin: 0;
+    width: fit-content;
+}
+
+#dimension-div {
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+#grid-window {
+    display: flex;    
+    flex-flow: column;
+    justify-content: space-around;
+    margin: 1vh 1vw;
+    height: 89vh;
+}
+
+.grid-row {
+    display: flex;
+    justify-content: space-around;
+}
+
+.dot {
+    border-width: 2px;
+    border-radius: 100%;
+    width: var(--dot-size);
+    height: var(--dot-size);
+    z-index: 10;
+}
+
+#bubble-enabled{
+    height: 4vmin;
+    width: 4vmin;
+    border-radius: 100%;
+    outline: none;
+    appearance: none;
+    background-color: #FF7F3E;
+    border: 1px solid black;
+}
+
+#bubble-enabled:checked{
+    background-color: #80C4E9;
+}
+
+canvas {
+    width: 100vmax;
+    height: 100vmax;
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+}
+
+.closest {
+    background-color: red !important;
+}
