@@ -6,6 +6,7 @@ const canvas_ctx = canvas.getContext('2d');
 // attaching the logic for creating all the dots to the pickers
 var rows_picker = document.getElementById('rows')
 var cols_picker = document.getElementById('cols')
+var refresh_button = document.getElementById('refresh')
 
 var grid_window = document.getElementById('grid-window')
 const grid_window_bounds = grid_window.getBoundingClientRect();
@@ -23,6 +24,8 @@ let x_diff;
 let y_diff;
 
 function create_grid(){
+    refresh_button.setAttribute('fill', '#80C4E9')
+    
     // clearing the current grid
     console.log("removing current grid");
     while(grid_window.lastChild){
@@ -68,6 +71,7 @@ function create_grid(){
     x_diff = (max_x - min_x) / (cols_picker.value - 1)
     y_diff = (max_y - min_y) / (rows_picker.value - 1)
     
+    refresh_button.setAttribute('fill', '#FF7F3E')
 }
 function flipButton(r, c){
     let dot_id = 'dot-'+ r + '_' + c
@@ -82,6 +86,7 @@ function flipButton(r, c){
 
 rows_picker.onchange = create_grid;
 cols_picker.onchange = create_grid;
+refresh_button.onclick = create_grid
 create_grid()
 
 
