@@ -231,6 +231,9 @@ function setup_test(){
 
     rows_picker.value = 4;
     cols_picker.value = 5;
+    dot_size_picker.value = 5
+    dot_size_picker.onchange()
+    
     header_dom.style.setProperty('display', 'none')
     create_grid()
     modal_dom.style.setProperty('display', 'flex')
